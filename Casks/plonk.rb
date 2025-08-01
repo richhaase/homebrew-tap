@@ -2,7 +2,7 @@
 cask "plonk" do
   desc "The unified package and dotfile manager for developers who tinker"
   homepage "https://github.com/richhaase/plonk"
-  version "0.9.1"
+  version "0.9.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,30 +12,23 @@ cask "plonk" do
 
   on_macos do
     on_intel do
-      url "https://github.com/richhaase/plonk/releases/download/v0.9.1/plonk_0.9.1_Darwin_x86_64.tar.gz"
-      sha256 "097d917ea471832c5de4cb73f28d1c2e2e987cf2bd1e56a097e4a64e5c919d98"
+      url "https://github.com/richhaase/plonk/releases/download/v0.9.2/plonk_0.9.2_Darwin_x86_64.tar.gz"
+      sha256 "51a0c0fc980cc5d49bba06a50a47032dac3d22c8a19adbe1a5cdc965a972f72d"
     end
     on_arm do
-      url "https://github.com/richhaase/plonk/releases/download/v0.9.1/plonk_0.9.1_Darwin_arm64.tar.gz"
-      sha256 "2a0f05e063c90d15b2e9a2ea0abc994cefa38c79e1522352c5190394119ca351"
+      url "https://github.com/richhaase/plonk/releases/download/v0.9.2/plonk_0.9.2_Darwin_arm64.tar.gz"
+      sha256 "57652ffb92eff2df62f82cc6d1f6f2257da5d4220d8e51d1fc9e950a5aae4de0"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/richhaase/plonk/releases/download/v0.9.1/plonk_0.9.1_Linux_x86_64.tar.gz"
-      sha256 "b5ca9addf9ad5f2464e50b8b2a4848fe476865d5c4fcff4e1a348c78d118fcde"
+      url "https://github.com/richhaase/plonk/releases/download/v0.9.2/plonk_0.9.2_Linux_x86_64.tar.gz"
+      sha256 "03a95a6448f8d31b3e47ceb0f08c366fee662c1d316c7e52d0bdec4929cecfac"
     end
     on_arm do
-      url "https://github.com/richhaase/plonk/releases/download/v0.9.1/plonk_0.9.1_Linux_arm64.tar.gz"
-      sha256 "671ff67799c4273758990463957cbfff552401f105a54a5e087e28058a45aba4"
-    end
-  end
-
-  postflight do
-    # Remove quarantine attribute to avoid "unidentified developer" warnings
-    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/plonk"
+      url "https://github.com/richhaase/plonk/releases/download/v0.9.2/plonk_0.9.2_Linux_arm64.tar.gz"
+      sha256 "6e3eaba7350a1a8f69c925833e68d3d88296d79ecae5e8ad6e89527543feccac"
     end
   end
 
