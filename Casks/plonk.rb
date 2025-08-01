@@ -2,7 +2,7 @@
 cask "plonk" do
   desc "The unified package and dotfile manager for developers who tinker"
   homepage "https://github.com/richhaase/plonk"
-  version "0.9.3"
+  version "0.9.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,28 +12,35 @@ cask "plonk" do
 
   on_macos do
     on_intel do
-      url "https://github.com/richhaase/plonk/releases/download/v0.9.3/plonk_0.9.3_Darwin_x86_64.tar.gz"
-      sha256 "6da6908533d15bc1b8fc215b0748c78a1ab65a7f5e532b644696648befa9c457"
+      url "https://github.com/richhaase/plonk/releases/download/v0.9.4/plonk_0.9.4_Darwin_x86_64.tar.gz"
+      sha256 "3bf5a1916f307b2d1a23ab848e17d84ff86ffe9fb6ee70e25baa219986bf1dec"
     end
     on_arm do
-      url "https://github.com/richhaase/plonk/releases/download/v0.9.3/plonk_0.9.3_Darwin_arm64.tar.gz"
-      sha256 "abe46ba839287a333daa594b50658c3f3d3f037e29fc866345bf77267d22b3aa"
+      url "https://github.com/richhaase/plonk/releases/download/v0.9.4/plonk_0.9.4_Darwin_arm64.tar.gz"
+      sha256 "d8e0005409141efac4e37cfd1b0f462a99623066f15e28d48738667bb7d535c6"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/richhaase/plonk/releases/download/v0.9.3/plonk_0.9.3_Linux_x86_64.tar.gz"
-      sha256 "78f00e1d9379e4d4ae69d44580625a2ca618f82a85518cb8fcdbe76d39379e23"
+      url "https://github.com/richhaase/plonk/releases/download/v0.9.4/plonk_0.9.4_Linux_x86_64.tar.gz"
+      sha256 "80d7c8a5b49e474fc4316bdd6c08b9b8e94cfddf33b975148d8acd1354938447"
     end
     on_arm do
-      url "https://github.com/richhaase/plonk/releases/download/v0.9.3/plonk_0.9.3_Linux_arm64.tar.gz"
-      sha256 "0f97f226ce540ce6a9ee9253851032433357a8dd804e3ff61e2ea4dead273d21"
+      url "https://github.com/richhaase/plonk/releases/download/v0.9.4/plonk_0.9.4_Linux_arm64.tar.gz"
+      sha256 "a1b2108a79c9ef392f07eca1eff1190ab7e53a4570b071bc4b213bf3d3e53edd"
     end
   end
 
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/plonk"] if File.exist("/usr/bin/xattr")
+  caveats do
+    "Plonk has been installed! Get started with:"
+    "  plonk --help"
+    "  plonk clone <your-github-username>/dotfiles"
+    ""
+    "Documentation: https://github.com/richhaase/plonk#readme"
+    ""
+    "Plonk manages both your dotfiles and packages in one unified tool."
+    "It requires Homebrew as a prerequisite."
   end
 
   # No zap stanza required
