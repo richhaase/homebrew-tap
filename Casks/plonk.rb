@@ -2,7 +2,7 @@
 cask "plonk" do
   desc "The unified package and dotfile manager for developers who tinker"
   homepage "https://github.com/richhaase/plonk"
-  version "0.9.2"
+  version "0.9.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,24 +12,28 @@ cask "plonk" do
 
   on_macos do
     on_intel do
-      url "https://github.com/richhaase/plonk/releases/download/v0.9.2/plonk_0.9.2_Darwin_x86_64.tar.gz"
-      sha256 "51a0c0fc980cc5d49bba06a50a47032dac3d22c8a19adbe1a5cdc965a972f72d"
+      url "https://github.com/richhaase/plonk/releases/download/v0.9.3/plonk_0.9.3_Darwin_x86_64.tar.gz"
+      sha256 "6da6908533d15bc1b8fc215b0748c78a1ab65a7f5e532b644696648befa9c457"
     end
     on_arm do
-      url "https://github.com/richhaase/plonk/releases/download/v0.9.2/plonk_0.9.2_Darwin_arm64.tar.gz"
-      sha256 "57652ffb92eff2df62f82cc6d1f6f2257da5d4220d8e51d1fc9e950a5aae4de0"
+      url "https://github.com/richhaase/plonk/releases/download/v0.9.3/plonk_0.9.3_Darwin_arm64.tar.gz"
+      sha256 "abe46ba839287a333daa594b50658c3f3d3f037e29fc866345bf77267d22b3aa"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/richhaase/plonk/releases/download/v0.9.2/plonk_0.9.2_Linux_x86_64.tar.gz"
-      sha256 "03a95a6448f8d31b3e47ceb0f08c366fee662c1d316c7e52d0bdec4929cecfac"
+      url "https://github.com/richhaase/plonk/releases/download/v0.9.3/plonk_0.9.3_Linux_x86_64.tar.gz"
+      sha256 "78f00e1d9379e4d4ae69d44580625a2ca618f82a85518cb8fcdbe76d39379e23"
     end
     on_arm do
-      url "https://github.com/richhaase/plonk/releases/download/v0.9.2/plonk_0.9.2_Linux_arm64.tar.gz"
-      sha256 "6e3eaba7350a1a8f69c925833e68d3d88296d79ecae5e8ad6e89527543feccac"
+      url "https://github.com/richhaase/plonk/releases/download/v0.9.3/plonk_0.9.3_Linux_arm64.tar.gz"
+      sha256 "0f97f226ce540ce6a9ee9253851032433357a8dd804e3ff61e2ea4dead273d21"
     end
+  end
+
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/plonk"] if File.exist("/usr/bin/xattr")
   end
 
   # No zap stanza required
