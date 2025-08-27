@@ -2,7 +2,7 @@
 cask "plonk" do
   desc "The unified package and dotfile manager for developers who tinker"
   homepage "https://github.com/richhaase/plonk"
-  version "0.11.7"
+  version "0.11.8"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "plonk" do
 
   on_macos do
     on_intel do
-      url "https://github.com/richhaase/plonk/releases/download/v0.11.7/plonk_0.11.7_Darwin_x86_64.tar.gz"
-      sha256 "aa1df5de1c6663e4b3c20418090d1ec771ee001e39854e70320e04948923e247"
+      url "https://github.com/richhaase/plonk/releases/download/v0.11.8/plonk_0.11.8_Darwin_x86_64.tar.gz"
+      sha256 "a0b8ec5d6861b0bd9309e3bc542ff3c833b08d49650989f3b9616b839a267be4"
     end
     on_arm do
-      url "https://github.com/richhaase/plonk/releases/download/v0.11.7/plonk_0.11.7_Darwin_arm64.tar.gz"
-      sha256 "32053dcf822d24258a578e8c90bba25eabfc912ad5da47710cfec288d7760f8d"
+      url "https://github.com/richhaase/plonk/releases/download/v0.11.8/plonk_0.11.8_Darwin_arm64.tar.gz"
+      sha256 "14c6e7a320fec9b81c8f5302a354795af2ba706e207ee22fb8d0488dfb332914"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/richhaase/plonk/releases/download/v0.11.7/plonk_0.11.7_Linux_x86_64.tar.gz"
-      sha256 "3236becb16cea5cf52868b0fc35ac8883bc417426583063d567b116fc9d3d498"
+      url "https://github.com/richhaase/plonk/releases/download/v0.11.8/plonk_0.11.8_Linux_x86_64.tar.gz"
+      sha256 "b73c2646f8f21fad136ec493edfdef9fdd2b80d98f7a327b6069eaab97fb62a8"
     end
     on_arm do
-      url "https://github.com/richhaase/plonk/releases/download/v0.11.7/plonk_0.11.7_Linux_arm64.tar.gz"
-      sha256 "a2a399d87f7f07ba06b14374a0ec80df1e8d4182d4647df7e860910da0caef40"
+      url "https://github.com/richhaase/plonk/releases/download/v0.11.8/plonk_0.11.8_Linux_arm64.tar.gz"
+      sha256 "76f3e114487d0db788d4255389ab4a4872b5e16f51a91e9d9caa708fc1ae143d"
     end
   end
 
