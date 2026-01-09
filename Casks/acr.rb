@@ -14,22 +14,22 @@ cask "acr" do
   on_macos do
     on_intel do
       url "https://github.com/richhaase/agentic-code-reviewer/releases/download/v#{version}/agentic-code-reviewer_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "970d05d38f9233a52caf8098c18df175088b38bb57f5af2d5a4075a867787509"
+      sha256 "cc8d9bf030278754387bc80367df0cc17df34ac1a1af14700ba26812bd153144"
     end
     on_arm do
       url "https://github.com/richhaase/agentic-code-reviewer/releases/download/v#{version}/agentic-code-reviewer_#{version}_Darwin_arm64.tar.gz"
-      sha256 "37048939045b63c452de4a5f5ebc4e93b0d3a1026421a89f8c3d0fc5baac8eb0"
+      sha256 "387a935896f561b8d7b164cf00b3e081687df7476e2220e4ae1aa724110b44f0"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/richhaase/agentic-code-reviewer/releases/download/v#{version}/agentic-code-reviewer_#{version}_Linux_x86_64.tar.gz"
-      sha256 "ccd7e51cafec1e2c54fa6a0bf6228c22b805217d4ebaa9ec7e8a5600139d8e5e"
+      sha256 "acda3b326060e0108dfc793ce2df17edeffac22d8d1422428a7e8adf9a916d2d"
     end
     on_arm do
       url "https://github.com/richhaase/agentic-code-reviewer/releases/download/v#{version}/agentic-code-reviewer_#{version}_Linux_arm64.tar.gz"
-      sha256 "42553f65096c62dcd4ce574eb91072d72caa7483d28a5d05b637dcfce658d59b"
+      sha256 "751d65f5c4c1d36f6c14d2138c6ef108ae8f00a18b9d08d664e3f0b35700050a"
     end
   end
 
