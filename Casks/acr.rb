@@ -3,7 +3,7 @@ cask "acr" do
   name "acr"
   desc "Agentic Code Reviewer - run parallel code reviews with AI agents"
   homepage "https://github.com/richhaase/agentic-code-reviewer"
-  version "0.2.3"
+  version "0.3.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "acr" do
   on_macos do
     on_intel do
       url "https://github.com/richhaase/agentic-code-reviewer/releases/download/v#{version}/agentic-code-reviewer_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "b5c38184ec0d2e53a2c2120bd46122290da8132acdfd8f9433a5efc358b57d5b"
+      sha256 "4ff3caf2876d1f356b1d9f7ccc65158e28d42fdfeaf5ec19e29524639c932a36"
     end
     on_arm do
       url "https://github.com/richhaase/agentic-code-reviewer/releases/download/v#{version}/agentic-code-reviewer_#{version}_Darwin_arm64.tar.gz"
-      sha256 "f4bc40b66d4f92a96b490835c4c5734f5e1d0d8b9ed29f60b6ec3f7aed14c886"
+      sha256 "82d2d2ed72d2b193965a1ccbae41564ac5ebaf306f1b5f4bc9a2069f3dfe5446"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/richhaase/agentic-code-reviewer/releases/download/v#{version}/agentic-code-reviewer_#{version}_Linux_x86_64.tar.gz"
-      sha256 "49cf8a634967f1ffdcea0be6f28a5e86e8736e8d86e9ff95d325da6aed6096d3"
+      sha256 "805d9356c8a7c3b674210e35feceb55533e0282bb6320cf70b9353be43c2a119"
     end
     on_arm do
       url "https://github.com/richhaase/agentic-code-reviewer/releases/download/v#{version}/agentic-code-reviewer_#{version}_Linux_arm64.tar.gz"
-      sha256 "e901e2c9d0bb32b1b8d0c84d56bf24deded4c1c1d26eceb7141954374472e24d"
+      sha256 "4be4aea80d89d790a358a26d01f810d5dfaa39e97a830a201005fcd14cb89831"
     end
   end
 
