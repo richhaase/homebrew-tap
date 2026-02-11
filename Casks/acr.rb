@@ -3,7 +3,7 @@ cask "acr" do
   name "acr"
   desc "Agentic Code Reviewer - run parallel code reviews with AI agents"
   homepage "https://github.com/richhaase/agentic-code-reviewer"
-  version "0.11.5"
+  version "0.11.6"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "acr" do
   on_macos do
     on_intel do
       url "https://github.com/richhaase/agentic-code-reviewer/releases/download/v#{version}/agentic-code-reviewer_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "79c39e269c5d30278af71787b2e8710dab3ef4348036afdcf05b45d68c86656e"
+      sha256 "8a3edb1fca9bd621cb5059ef08ebe7448e8ee5e000127d70df0fa79cbf8fd923"
     end
     on_arm do
       url "https://github.com/richhaase/agentic-code-reviewer/releases/download/v#{version}/agentic-code-reviewer_#{version}_Darwin_arm64.tar.gz"
-      sha256 "87f2d082b76a29c3a0d16ff0303a069e77134d648706f4cd058b9876a997ec3d"
+      sha256 "eb59900bc76c47fe4d9556da2f26a25ec105194dac28501205dcc5b55a160ae5"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/richhaase/agentic-code-reviewer/releases/download/v#{version}/agentic-code-reviewer_#{version}_Linux_x86_64.tar.gz"
-      sha256 "bfa46e323815a7ecba97179a07f99cf1d90bd84a740231964bbd7228061ad5e8"
+      sha256 "dc7456897985cf521ff4f711b341f189620fbf296484377c182de9a5eceb3700"
     end
     on_arm do
       url "https://github.com/richhaase/agentic-code-reviewer/releases/download/v#{version}/agentic-code-reviewer_#{version}_Linux_arm64.tar.gz"
-      sha256 "546eaeb0699ec99c6ff7f8bef3c47a94c5154eaffd72d9903d498ce6ab9093ea"
+      sha256 "514ae8e025cba4e3d7fa1c274eaf94b522951ae2c2541de581350954d6b862f2"
     end
   end
 
@@ -41,7 +41,7 @@ cask "acr" do
     "Documentation: https://github.com/richhaase/agentic-code-reviewer#readme"
     ""
     "ACR runs parallel code reviews using AI agents and summarizes findings."
-    "It requires the 'codex' CLI to be installed."
+    "It requires at least one supported LLM CLI: codex, claude, or gemini."
   end
 
   # No zap stanza required
