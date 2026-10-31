@@ -1,6 +1,6 @@
 cask "bigboard" do
-  version "1.2.0"
-  sha256 "5cfea52bd62426c98bcc78cc953f36a9203cea3ed77a105a38f574e80a1faa7f"
+  version "1.2.2"
+  sha256 "230b7e4b43769f8eb67a1281c4810bb2d0872a619871a644824b007c25ec6b5d"
 
   url "https://github.com/richhaase/bigboard/releases/download/v#{version}/Bigboard_#{version}_darwin_universal.zip"
   name "Bigboard"
@@ -9,7 +9,7 @@ cask "bigboard" do
 
   depends_on formula: "gh"
   depends_on formula: "git"
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Bigboard.app"
 
