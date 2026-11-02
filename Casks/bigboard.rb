@@ -1,6 +1,6 @@
 cask "bigboard" do
-  version "2.0.2"
-  sha256 "2b8382021803aa3829adb3ddde3eef789781e6c4c35181c952574b28bd738b62"
+  version "2.1.0"
+  sha256 "cf5d463ffbd9be5469cf1f51cca11c1621922ab624bfffb3e90785c2fff3b2f4"
 
   url "https://github.com/richhaase/bigboard/releases/download/v#{version}/Bigboard_#{version}_darwin_universal.zip"
   name "Bigboard"
@@ -12,8 +12,8 @@ cask "bigboard" do
   app "Bigboard.app"
 
   caveats <<~EOS
-    Bigboard requires Apple Command Line Tools for repository history.
-    If they are missing, run xcode-select --install before opening Bigboard.
+    Bigboard requires Git for repository history (Homebrew or Xcode Git).
+    Install Git if it is missing before opening Bigboard.
     Open Bigboard and choose Sign in with GitHub to connect your repositories.
   EOS
 end
