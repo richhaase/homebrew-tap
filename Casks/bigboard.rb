@@ -1,6 +1,6 @@
 cask "bigboard" do
-  version "2.2.0"
-  sha256 "eaf8ed0cf110652b7398129c0c17539328444865e79e467718f70b897eaf59ba"
+  version "2.3.0"
+  sha256 "2a877accd6afe3514555ef9419b5f39ad186243abd3839d4f01dcfc22760b5f0"
 
   url "https://github.com/richhaase/bigboard/releases/download/v#{version}/Bigboard_#{version}_darwin_universal.zip"
   name "Bigboard"
