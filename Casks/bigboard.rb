@@ -1,6 +1,6 @@
 cask "bigboard" do
-  version "2.4.0"
-  sha256 "82005303064b5d71c9dd144064519dec1ddac20716315feceaa9178734602be9"
+  version "3.0.0"
+  sha256 "5e45c2ecaf58531ef4fa0579352b94963b39855ffacd6915ee83e6bed5ac7681"
 
   url "https://github.com/richhaase/bigboard/releases/download/v#{version}/Bigboard_#{version}_darwin_universal.zip"
   name "Bigboard"
@@ -8,12 +8,22 @@ cask "bigboard" do
   homepage "https://github.com/richhaase/bigboard"
 
   depends_on macos: :tahoe
+  depends_on formula: "gh"
 
   app "Bigboard.app"
+  binary "#{appdir}/Bigboard.app/Contents/MacOS/Bigboard", target: "bigboard"
 
   caveats <<~EOS
     Bigboard requires Git for repository history (Homebrew or Xcode Git).
     Install Git if it is missing before opening Bigboard.
-    Open Bigboard and choose Sign in with GitHub to connect your repositories.
+    Run  before opening Bigboard; it uses the active GitHub CLI account.
+    It reads history from GitHub clones in folders you choose and only fetches
+    their remote-tracking default branch.
+    Run  to open the app, or  for terminal commands.
   EOS
+
+  zap trash: [
+    "~/.cache/bigboard",
+    "~/.config/bigboard",
+  ]
 end
